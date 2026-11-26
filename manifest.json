@@ -1,0 +1,9 @@
+{
+  "name": "ALOK AI",
+  "short_name": "ALOK",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#080d1b",
+  "theme_color": "#080d1b",
+  "description": "Friendly Hinglish AI companion starter"
+}

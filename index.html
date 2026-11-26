@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080d1b">
+  <title>ALOK AI</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand-mark">A</div>
+      <div><h1>ALOK <span>AI</span></h1><p>Your friendly AI dost</p></div>
+      <div class="online"><i></i> READY</div>
+    </header>
+
+    <section class="hero">
+      <div class="orb"></div>
+      <div class="avatar" id="avatar" role="button" aria-label="ALOK avatar. Double tap for secret menu">
+        <div class="aura"></div>
+        <div class="head">
+          <div class="hair"></div><div class="face">
+            <div class="brows"><b></b><b></b></div>
+            <div class="eyes"><i></i><i></i></div>
+            <div class="nose"></div><div class="mouth"></div>
+          </div>
+          <div class="neck"></div>
+        </div>
+        <div class="shoulders"></div>
+        <div class="avatar-glow"></div>
+      </div>
+      <div class="hero-copy">
+        <div class="status-pill"><span></span> ONLINE • FRIENDLY MODE</div>
+        <h2>Hey Anshu! 👋</h2>
+        <p>Main ALOK hoon. Batao dost, aaj kya karna hai?</p>
+        <small>ALOK par double-tap karo · Secret menu</small>
+      </div>
+    </section>
+
+    <section class="chat" aria-label="Chat">
+      <div class="chat-head"><b>Chat with ALOK</b><span>Hinglish only</span></div>
+      <div class="messages" id="messages">
+        <div class="bubble bot">Hey Anshu! ❤️ Main tumhara friendly AI dost ALOK hoon. Mujhse kuch bhi bolo!</div>
+      </div>
+      <form id="chatForm">
+        <input id="messageInput" autocomplete="off" placeholder="Anshu, yahan message likho..." />
+        <button class="send" aria-label="Send">➤</button>
+      </form>
+      <div class="chat-actions">
+        <button id="micBtn" class="soft-btn">🎙️ Voice input</button>
+        <button id="speakBtn" class="soft-btn">🔊 ALOK ko suno</button>
+      </div>
+    </section>
+
+    <footer>ALOK AI · Personal companion prototype</footer>
+  </main>
+
+  <div class="modal-backdrop" id="secretMenu" aria-hidden="true">
+    <section class="modal">
+      <div class="modal-top"><div><span class="eyebrow">HIDDEN CONTROL</span><h2>Secret Menu 🔐</h2></div><button id="closeMenu" class="close">✕</button></div>
+      <p class="muted">Anshu, yahan se ALOK ko customize karo.</p>
+      <div class="tab-row">
+        <button class="tab active" data-tab="voice">🎙️ Voice Changer</button>
+        <button class="tab" data-tab="character">🧑 Character Changer</button>
+      </div>
+      <div class="tab-panel" id="voicePanel">
+        <label for="voiceSelect">Voice (phone/browser ke available voices)</label>
+        <select id="voiceSelect"><option value="">Default phone voice</option></select>
+        <label for="pitch">Voice pitch <strong id="pitchVal">1.0</strong></label>
+        <input id="pitch" type="range" min="0.5" max="1.8" step="0.1" value="1">
+        <label for="rate">Speaking speed <strong id="rateVal">1.0</strong></label>
+        <input id="rate" type="range" min="0.7" max="1.3" step="0.1" value="1">
+        <p class="hint">Note: Ye phone ki text-to-speech voice, pitch aur speed adjust karta hai; real-time live voice conversion nahi hai.</p>
+        <button id="testVoice" class="primary">Test ALOK voice</button>
+      </div>
+      <div class="tab-panel hidden" id="characterPanel">
+        <label>Choose ALOK's look</label>
+        <div class="character-options">
+          <button class="character-choice selected" data-look="blue">💙 Blue Tech</button>
+          <button class="character-choice" data-look="violet">💜 Violet</button>
+          <button class="character-choice" data-look="green">💚 Neon Green</button>
+        </div>
+        <p class="hint">Abhi ye avatar theme change karta hai. Agle version mein alag 3D male characters add kar sakte hain.</p>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
